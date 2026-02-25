@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGen MParivahan — Digital Vehicle Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#1a3a9e;
+  --blue-dark:#0f2260;
+  --blue-light:#2f54d4;
+  --text:#111827;
+  --soft:#6b7280;
+  --border:#e5e7eb;
+  --off-white:#f5f7fc;
+  --blue-pale:#dce6ff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sora',sans-serif;background:#fff;color:var(--text);}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 60px;background:#fff;
+  border-bottom:1px solid var(--border);z-index:100;
+}
+.logo{display:flex;align-items:center;gap:15px;text-decoration:none;}
+.logo img{width:60px;height:60px;border-radius:50%;}
+.logo-name{font-size:20px;font-weight:800;color:var(--blue);}
+.nav-pill{padding:7px 18px;border-radius:100px;border:1.5px solid var(--blue);
+font-size:12px;color:var(--blue);background:#eef2ff;}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:140px 24px;
+  background:linear-gradient(170deg,#ffffff 0%,#eef2ff 60%,#dce6ff 100%);
+}
+.hero img{width:120px;height:120px;border-radius:50%;margin-bottom:20px;}
+.hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;color:var(--blue);}
+.hero p{margin-top:12px;font-size:16px;color:#374151;}
+.btn{margin-top:30px;padding:18px 40px;border:none;border-radius:16px;
+background:linear-gradient(135deg,var(--blue-light),var(--blue-dark));
+color:#fff;font-size:18px;font-weight:600;cursor:pointer;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);
+border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stat{text-align:center;padding:40px 20px;}
+.stat h2{color:var(--blue);font-size:36px;}
+
+/* SECTION */
+.section{max-width:1100px;margin:auto;padding:90px 40px;}
+.section-eyebrow{font-family:'Space Mono',monospace;font-size:10px;
+letter-spacing:4px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.section-heading{font-size:clamp(28px,4vw,46px);font-weight:800;margin-bottom:52px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.card{border:1.5px solid var(--border);border-radius:20px;padding:32px;transition:.3s;}
+.card:hover{border-color:var(--blue);box-shadow:0 12px 30px rgba(26,58,158,.1);}
+.card-icon-wrap{width:52px;height:52px;border-radius:14px;background:var(--blue-pale);
+display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.card-title{font-size:17px;font-weight:700;margin-bottom:10px;}
+.card-desc{font-size:13px;color:var(--soft);line-height:1.7;}
+
+/* STEPS */
+.steps-bg{background:var(--off-white);
+border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+.step{text-align:center}
+.step-circle{width:54px;height:54px;border-radius:50%;
+background:linear-gradient(135deg,var(--blue-light),var(--blue-dark));
+display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;
+margin:0 auto 18px;}
+.step-title{font-weight:700;margin-bottom:8px;}
+.step-desc{font-size:12px;color:var(--soft);line-height:1.6;}
+
+/* FOOTER */
+footer{
+  background:#f9fafc;
+  padding:60px 40px 30px 40px;
+  border-top:1px solid var(--border);
+}
+.footer-grid{
+  max-width:1200px;margin:auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+.footer-title{font-weight:600;margin-bottom:15px;}
+.footer-link{display:block;text-decoration:none;color:#6b7280;font-size:14px;margin-bottom:8px;}
+.footer-bottom{
+  border-top:1px solid var(--border);
+  margin-top:40px;padding-top:20px;
+  text-align:center;font-size:13px;color:#6b7280;
+}
+
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  .stats{grid-template-columns:1fr}
+  .section{padding:60px 20px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a class="logo" href="#">
+    <img src="logo.png" alt="Logo">
+    <div class="logo-name">NextGen MParivahan</div>
+  </a>
+  <div class="nav-pill">Official App</div>
+</nav>
+
+<section class="hero">
+  <img src="logo.png" alt="Logo">
+  <h1>NextGen MParivahan</h1>
+  <p>Official digital vehicle & license management app</p>
+  <button class="btn">Download Now</button>
+</section>
+
+<div class="stats">
+  <div class="stat"><h2>5Cr+</h2><p>Users</p></div>
+  <div class="stat"><h2>30+</h2><p>States</p></div>
+  <div class="stat"><h2>100%</h2><p>Legally Valid</p></div>
+</div>
+
+<section class="section">
+  <div class="section-eyebrow">✦ Features</div>
+  <div class="section-heading">Everything in one app.</div>
+  <div class="cards">
+    <div class="card"><div class="card-icon-wrap">📄</div><div class="card-title">Digital RC & DL</div><div class="card-desc">Store Registration Certificate and Driving Licence digitally.</div></div>
+    <div class="card"><div class="card-icon-wrap">💸</div><div class="card-title">Pay Challans</div><div class="card-desc">Check and pay traffic challans instantly.</div></div>
+    <div class="card"><div class="card-icon-wrap">🛡️</div><div class="card-title">Govt Verified</div><div class="card-desc">Synced with official vehicle databases.</div></div>
+    <div class="card"><div class="card-icon-wrap">🔔</div><div class="card-title">Renewal Alerts</div><div class="card-desc">Insurance & fitness reminders before expiry.</div></div>
+    <div class="card"><div class="card-icon-wrap">🌐</div><div class="card-title">Offline Access</div><div class="card-desc">Access documents without internet.</div></div>
+    <div class="card"><div class="card-icon-wrap">⚡</div><div class="card-title">Instant Vehicle Info</div><div class="card-desc">Get full vehicle details anytime.</div></div>
+  </div>
+</section>
+
+<div class="steps-bg">
+<section class="section">
+  <div class="section-eyebrow">✦ Quick Start</div>
+  <div class="section-heading">Ready in 4 steps.</div>
+  <div class="steps-row">
+    <div class="step"><div class="step-circle">1</div><div class="step-title">Download App</div><div class="step-desc">Install the app on your device.</div></div>
+    <div class="step"><div class="step-circle">2</div><div class="step-title">OTP Login</div><div class="step-desc">Login using mobile OTP.</div></div>
+    <div class="step"><div class="step-circle">3</div><div class="step-title">Add Vehicle</div><div class="step-desc">Enter vehicle number to fetch documents.</div></div>
+    <div class="step"><div class="step-circle">4</div><div class="step-title">Go Paperless</div><div class="step-desc">Show digital documents anywhere.</div></div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Company</div>
+      <a class="footer-link" href="#">About Us</a>
+      <a class="footer-link" href="#">Careers</a>
+      <a class="footer-link" href="#">Contact</a>
+    </div>
+    <div>
+      <div class="footer-title">Legal</div>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+      <a class="footer-link" href="#">Disclaimer</a>
+    </div>
+    <div>
+      <div class="footer-title">Support</div>
+      <a class="footer-link" href="#">Help Center</a>
+      <a class="footer-link" href="#">FAQs</a>
+      <a class="footer-link" href="#">Report Issue</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Government of India. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
